@@ -10,4 +10,6 @@
 
 
     <color name="yellow">#FFC801</color>
+    <color name="colorTextgrey">#F1F1F1</color>
+    <color name="colorTransparent">#0000ffff</color>
 </resources>

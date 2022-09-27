@@ -3,9 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Raj.Kayasth/AndroidStudioProjects/FirebaseAuthExampe/app/src/main/res/layout/activity_google_sign_in.xml" value="0.25" />
+        <entry key="..\:/Users/Raj.Kayasth/AndroidStudioProjects/FirebaseAuthExampe/app/src/main/res/layout/activity_home.xml" value="0.25" />
         <entry key="..\:/Users/Raj.Kayasth/AndroidStudioProjects/FirebaseAuthExampe/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/Raj.Kayasth/AndroidStudioProjects/FirebaseAuthExampe/app/src/main/res/layout/activity_sign_in.xml" value="0.2359375" />
-        <entry key="..\:/Users/Raj.Kayasth/AndroidStudioProjects/FirebaseAuthExampe/app/src/main/res/layout/activity_sign_up.xml" value="0.1" />
+        <entry key="..\:/Users/Raj.Kayasth/AndroidStudioProjects/FirebaseAuthExampe/app/src/main/res/layout/activity_sign_up.xml" value="0.18703703703703703" />
         <entry key="..\:/Users/Raj.Kayasth/AndroidStudioProjects/FirebaseAuthExampe/app/src/main/res/layout/activity_sing_up.xml" value="0.2359375" />
       </map>
     </option>
