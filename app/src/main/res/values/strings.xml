@@ -6,4 +6,7 @@
     <string name="not_registered_yet_sign_up">Not Registered Yet , Sign Up !</string>
     <string name="sign_up">Sign Up</string>
     <string name="already_registered_sign_in">Already Registered , Sign In !</string>
+    <string name="lbl_or">Or</string>
+    <string name="retype_your_password">Retype Your Password</string>
+    <string name="sign_out">Sign Out</string>
 </resources>
