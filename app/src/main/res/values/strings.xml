@@ -9,4 +9,13 @@
     <string name="lbl_or">Or</string>
     <string name="retype_your_password">Retype Your Password</string>
     <string name="sign_out">Sign Out</string>
+    <string name="type_your_number">Type your number</string>
+    <string name="send_otp">Send otp</string>
+    <string name="login_with_nmobile_number">Login with \nMobile number</string>
+    <string name="_91">+91</string>
+    <string name="verify">Verify</string>
+    <string name="resend_otp">Resend OTP</string>
+    <string name="_0">0</string>
+    <string name="_1">0</string>
+    <string name="otpimage">OTPiMAGE</string>
 </resources>

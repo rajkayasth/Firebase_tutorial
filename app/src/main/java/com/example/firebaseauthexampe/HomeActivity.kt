@@ -17,6 +17,7 @@ class HomeActivity : AppCompatActivity() {
 
     private var _binding: ActivityHomeBinding? = null
     private val binding get() = _binding!!
+
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,14 +25,13 @@ class HomeActivity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
 
-        val email = intent.getStringExtra("Email")
-        val name = intent.getStringExtra("Name")
-
+        val email = auth.currentUser?.phoneNumber
+        val name = auth.currentUser?.displayName
 
 
         binding.cardSignOut.setOnClickListener {
             auth.signOut()
-            startActivity(Intent(this@HomeActivity, GoogleSignInActivity::class.java))
+            startActivity(Intent(this@HomeActivity, PhoneActivity::class.java))
         }
 
         binding.textViewEmail.text = "$email \n$name"
