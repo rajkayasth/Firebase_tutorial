@@ -1,5 +1,6 @@
 package com.example.firebaseauthexampe.realtimedb.activitys
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -10,7 +11,6 @@ import androidx.databinding.DataBindingUtil
 import com.example.firebaseauthexampe.R
 import com.example.firebaseauthexampe.databinding.ActivityEmployeeDetailsBinding
 import com.example.firebaseauthexampe.realtimedb.model.Employee
-import com.google.android.material.button.MaterialButton
 import com.google.firebase.database.FirebaseDatabase
 
 class EmployeeDetailsActivity : AppCompatActivity() {
@@ -26,6 +26,31 @@ class EmployeeDetailsActivity : AppCompatActivity() {
                 intent.getStringExtra("empId").toString(),
                 intent.getStringExtra("empName").toString()
             )
+        }
+        binding.btnDelete.setOnClickListener {
+            deleteRecord(
+                intent.getStringExtra("empId").toString()
+            )
+        }
+    }
+
+    private fun deleteRecord(id: String) {
+        val dbRef = FirebaseDatabase.getInstance().getReference("Employees").child(id)
+        val mTask = dbRef.removeValue()
+        mTask.addOnSuccessListener {
+            Toast.makeText(this@EmployeeDetailsActivity, "Employee Deleted..", Toast.LENGTH_SHORT)
+                .show()
+            val intent = Intent(this, FetchingActivity::class.java)
+            finish()
+            startActivity(intent)
+            mTask.addOnFailureListener { error ->
+                Toast.makeText(
+                    this@EmployeeDetailsActivity,
+                    "Deleteing Error ${error.message}",
+                    Toast.LENGTH_SHORT
+                )
+                    .show()
+            }
         }
     }
 
