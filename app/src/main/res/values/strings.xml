@@ -18,4 +18,12 @@
     <string name="_0">0</string>
     <string name="_1">0</string>
     <string name="otpimage">OTPiMAGE</string>
+    <string name="get_data">Get Data</string>
+    <string name="enter_name">enter name</string>
+    <string name="enter_new_name">enter new name</string>
+    <string name="enter_new_password">Enter new Password</string>
+    <string name="update_data">UpdateData</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="save_data">Save Data</string>
+    <string name="delete_data">Delete data</string>
 </resources>

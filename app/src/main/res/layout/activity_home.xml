@@ -19,8 +19,8 @@
             android:layout_height="50dp"
             android:layout_marginHorizontal="15dp"
             android:layout_marginBottom="15dp"
-            app:cardBackgroundColor="@color/black"
             android:elevation="20dp"
+            app:cardBackgroundColor="@color/black"
             app:cardCornerRadius="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -44,16 +44,16 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
 
-<!--                <com.google.android.material.imageview.ShapeableImageView-->
-<!--                    android:id="@+id/ivGoogle"-->
-<!--                    android:layout_width="30dp"-->
-<!--                    android:layout_height="30dp"-->
-<!--                    android:layout_marginStart="20dp"-->
-<!--                    android:backgroundTint="@color/black"-->
-<!--                    android:src="@drawable/google"-->
-<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                    app:layout_constraintStart_toStartOf="parent"-->
-<!--                    app:layout_constraintTop_toTopOf="parent" />-->
+                <!--                <com.google.android.material.imageview.ShapeableImageView-->
+                <!--                    android:id="@+id/ivGoogle"-->
+                <!--                    android:layout_width="30dp"-->
+                <!--                    android:layout_height="30dp"-->
+                <!--                    android:layout_marginStart="20dp"-->
+                <!--                    android:backgroundTint="@color/black"-->
+                <!--                    android:src="@drawable/google"-->
+                <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    app:layout_constraintTop_toTopOf="parent" />-->
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </com.google.android.material.card.MaterialCardView>
@@ -64,12 +64,98 @@
             android:layout_height="wrap_content"
             android:text="TextView"
             android:textColor="@color/black"
-            android:textStyle="bold"
             android:textSize="20sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/cardSignOut"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGetData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/black"
+            android:text="@string/get_data"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toStartOf="@id/btnUpdateData"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewEmail" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSaveData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/black"
+            android:text="@string/save_data"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@id/btnGetData"
+            app:layout_constraintTop_toBottomOf="@id/btnGetData" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDeleteData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/black"
+            android:text="@string/delete_data"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/btnUpdateData"
+            app:layout_constraintTop_toBottomOf="@id/btnGetData" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnUpdateData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/black"
+            android:textColor="@color/white"
+            android:text="@string/update_data"
+           app:layout_constraintStart_toEndOf="@id/btnGetData"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewEmail" />
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etEnterName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="@string/enter_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etEnterpassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="@string/enter_password"
+            app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@id/etEnterName" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etEnterNewName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="@string/enter_new_name"
+            app:layout_constraintStart_toEndOf="@id/etEnterName"
+            app:layout_constraintTop_toTopOf="parent" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etEnterNewPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+            android:hint="@string/enter_new_password"
+            app:layout_constraintStart_toEndOf="@id/etEnterpassword"
+            app:layout_constraintTop_toBottomOf="@id/etEnterNewName" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
