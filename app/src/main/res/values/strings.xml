@@ -26,4 +26,9 @@
     <string name="enter_password">Enter Password</string>
     <string name="save_data">Save Data</string>
     <string name="delete_data">Delete data</string>
+    <string name="do_batch_write">Do Batch Write</string>
+    <string name="do_transaction">Upload Files</string>
+    <string name="upload_image">Upload Image</string>
+    <string name="pick_image">Pick Image</string>
+    <string name="download_file">Download Image</string>
 </resources>

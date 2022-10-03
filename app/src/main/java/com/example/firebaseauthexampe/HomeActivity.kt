@@ -49,9 +49,9 @@ class HomeActivity : AppCompatActivity() {
         }
 
         binding.btnUpdateData.setOnClickListener {
-            val oldPerson  = getOldPerson()
+            val oldPerson = getOldPerson()
             val newPersonMap = getNewPersonMap()
-            updatePerson(oldPerson,newPersonMap)
+            updatePerson(oldPerson, newPersonMap)
         }
 
         binding.btnSaveData.setOnClickListener {
@@ -64,13 +64,24 @@ class HomeActivity : AppCompatActivity() {
             deletePerson(person)
         }
 
+        binding.btnBatchWrite.setOnClickListener {
+            changeName(
+                "0Na6nc285tbZJequu2eI",
+                "Elon"
+            )
+        }
+
+        binding.btnTransaction.setOnClickListener {
+            startActivity(Intent(this@HomeActivity,UploadActivity::class.java))
+        }
+
     }
 
 
-    private fun getOldPerson(): Person{
+    private fun getOldPerson(): Person {
         val email = binding.etEnterName.text.toString()
         val pass = binding.etEnterpassword.text.toString()
-        return Person(email,pass)
+        return Person(email, pass)
     }
 
     private fun getNewPersonMap(): Map<String, Any> {
@@ -87,11 +98,48 @@ class HomeActivity : AppCompatActivity() {
     }
 
 
+    private fun birthDay(personId: String) = CoroutineScope(Dispatchers.IO).launch {
+        try {
+
+            Firebase.firestore.runTransaction { transaction ->
+                val personRef = personalCollectionRef.document(personId)
+
+            }
+
+        } catch (e: Exception) {
+            withContext(Dispatchers.Main) {
+                Toast.makeText(this@HomeActivity, e.message, Toast.LENGTH_SHORT)
+                    .show()
+            }
+
+        }
+    }
+
+
+    private fun changeName(personId: String, newFirstName: String) =
+        CoroutineScope(Dispatchers.IO).launch {
+
+            try {
+                Firebase.firestore.runBatch { batch ->
+                    val personRef = personalCollectionRef.document(personId)
+                    batch.update(personRef, "firstName", newFirstName)
+                }.await()
+            } catch (e: Exception) {
+                withContext(Dispatchers.Main) {
+                    Toast.makeText(this@HomeActivity, e.message, Toast.LENGTH_SHORT)
+                        .show()
+                }
+
+            }
+
+        }
+
     private fun savePerson(person: Person) = CoroutineScope(Dispatchers.IO).launch {
         try {
             personalCollectionRef.add(person).await()
             withContext(Dispatchers.Main) {
-                Toast.makeText(this@HomeActivity, "Successfully Saved Data", Toast.LENGTH_LONG).show()
+                Toast.makeText(this@HomeActivity, "Successfully Saved Data", Toast.LENGTH_LONG)
+                    .show()
             }
         } catch (e: Exception) {
             withContext(Dispatchers.Main) {
@@ -111,11 +159,11 @@ class HomeActivity : AppCompatActivity() {
             if (personQuery.documents.isNotEmpty()) {
                 for (documents in personQuery) {
                     try {
-//                      personalCollectionRef.document(documents.id).delete().await()
+                        personalCollectionRef.document(documents.id).delete().await()
 
-                        personalCollectionRef.document(documents.id).update(mapOf(
-                            "firstName" to FieldValue.delete()
-                        ))
+//                        personalCollectionRef.document(documents.id).update(mapOf(
+//                            "firstName" to FieldValue.delete()
+//                        ))
 
                     } catch (e: Exception) {
                         withContext(Dispatchers.Main) {
@@ -143,7 +191,8 @@ class HomeActivity : AppCompatActivity() {
             if (personQuery.documents.isNotEmpty()) {
                 for (documents in personQuery) {
                     try {
-                        personalCollectionRef.document(documents.id).update("firstName",person.firstName)
+                        personalCollectionRef.document(documents.id)
+                            .update("firstName", person.firstName)
                         personalCollectionRef.document(documents.id)
                             .set(newPersonMap, SetOptions.merge()).await()
                     } catch (e: Exception) {
