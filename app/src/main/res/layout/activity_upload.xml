@@ -15,10 +15,11 @@
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/ivUploadedImage"
-            android:layout_width="300dp"
-            android:layout_height="450dp"
+            android:layout_width="150dp"
+            android:layout_height="0dp"
             android:layout_marginTop="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:background="#F1F1F1"
+            app:layout_constraintBottom_toBottomOf="@+id/btnDeleteImage"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -28,21 +29,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="@string/pick_image"
             android:backgroundTint="@color/btn_color"
+            android:text="@string/pick_image"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ivUploadedImage" />
+            app:layout_constraintStart_toEndOf="@id/ivUploadedImage"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnUploadImage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:text="@string/upload_image"
             android:backgroundTint="@color/btn_color"
+            android:text="@string/upload_image"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivUploadedImage"
             app:layout_constraintTop_toBottomOf="@id/btnPickImage" />
 
 
@@ -50,12 +51,50 @@
             android:id="@+id/btnDownloadFile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="@string/download_file"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
             android:backgroundTint="@color/btn_color"
+            android:text="@string/download_file"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivUploadedImage"
             app:layout_constraintTop_toBottomOf="@id/btnUploadImage" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDeleteImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="@color/btn_color"
+            android:text="@string/delete_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivUploadedImage"
+            app:layout_constraintTop_toBottomOf="@id/btnDownloadFile" />
+
+<!--        <com.google.android.material.button.MaterialButton-->
+<!--            android:id="@+id/btnRealTimeDb"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:backgroundTint="@color/black"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:text="@string/realTime_Db"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/btnDeleteImage" />-->
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvImages"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@id/btnDeleteImage"/>
+
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

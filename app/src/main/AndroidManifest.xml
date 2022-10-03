@@ -15,6 +15,10 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".realtimedb.InsertionActivity"
+            android:exported="false" />
+        <activity android:name=".realtimedb.RealtimeDbActivity" />
+        <activity
             android:name=".UploadActivity"
             android:exported="false" />
         <activity
@@ -22,13 +26,13 @@
             android:exported="false" />
         <activity
             android:name=".PhoneActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".HomeActivity"
             android:exported="false" />
         <activity
             android:name=".GoogleSignInActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".SignUpActivity"
             android:exported="false" />
@@ -44,15 +48,15 @@
         <activity
             android:name=".MainActivity"
             android:exported="false" />
+
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="com.example.firebaseauthexampe.fileProvider"
             android:exported="false"
-            android:grantUriPermissions="true" >
-
-            <meta-data android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths"/>
-
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
         </provider>
     </application>
 
