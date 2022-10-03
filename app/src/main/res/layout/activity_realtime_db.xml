@@ -10,16 +10,17 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".realtimedb.RealtimeDbActivity">
+        tools:context=".realtimedb.activitys.RealtimeDbActivity">
 
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/firebase_realtime_database_app_in_kotlin"
             android:layout_marginTop="80dp"
-            android:textSize="28sp"
+            android:layout_marginHorizontal="20dp"
+            android:textSize="24sp"
             android:gravity="center"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"

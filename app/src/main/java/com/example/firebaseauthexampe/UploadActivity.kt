@@ -1,20 +1,15 @@
 package com.example.firebaseauthexampe
 
-import android.content.Intent
 import android.graphics.BitmapFactory
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.CountDownTimer
 import android.util.Log
-import android.util.TimeUtils
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.firebaseauthexampe.databinding.ActivityHomeBinding
 import com.example.firebaseauthexampe.databinding.ActivityUploadBinding
-import com.example.firebaseauthexampe.realtimedb.RealtimeDbActivity
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.ktx.storage
 import kotlinx.coroutines.CoroutineScope

@@ -8,9 +8,8 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.example.firebaseauthexampe.databinding.ActivityHomeBinding
-import com.example.firebaseauthexampe.realtimedb.RealtimeDbActivity
+import com.example.firebaseauthexampe.realtimedb.activitys.RealtimeDbActivity
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.SetOptions
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.firestore.ktx.toObject
@@ -73,7 +72,7 @@ class HomeActivity : AppCompatActivity() {
         }
 
         binding.btnRealTimeDb.setOnClickListener {
-            startActivity(Intent(this@HomeActivity,RealtimeDbActivity::class.java))
+            startActivity(Intent(this@HomeActivity, RealtimeDbActivity::class.java))
         }
 
         binding.btnTransaction.setOnClickListener {

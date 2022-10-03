@@ -1,4 +1,4 @@
-package com.example.firebaseauthexampe.realtimedb
+package com.example.firebaseauthexampe.realtimedb.activitys
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,7 +7,6 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.example.firebaseauthexampe.R
 import com.example.firebaseauthexampe.databinding.ActivityInsertionBinding
-import com.example.firebaseauthexampe.databinding.ActivityRealtimeDbBinding
 import com.example.firebaseauthexampe.realtimedb.model.Employee
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase

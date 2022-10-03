@@ -38,4 +38,10 @@
     <string name="firebase_realtime_database_app_in_kotlin">Firebase Realtime Database App in Kotlin</string>
     <string name="enter_age">Enter age</string>
     <string name="enter_salary">Enter salary</string>
+    <string name="emp_name">Emp Name</string>
+    <string name="loading_data">Loading Data!!!....</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
+    <string name="emp_id">Emp id</string>
+    <string name="emp_age">Emp Age</string>
 </resources>

@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Raj.Kayasth/AndroidStudioProjects/FirebaseAuthExampe/app/src/main/res/drawable/edit_text_bg.xml" value="0.124" />
+        <entry key="..\:/Users/Raj.Kayasth/AndroidStudioProjects/FirebaseAuthExampe/app/src/main/res/layout/activity_employee_details.xml" value="0.25" />
+        <entry key="..\:/Users/Raj.Kayasth/AndroidStudioProjects/FirebaseAuthExampe/app/src/main/res/layout/activity_fetching.xml" value="0.25" />
         <entry key="..\:/Users/Raj.Kayasth/AndroidStudioProjects/FirebaseAuthExampe/app/src/main/res/layout/activity_google_sign_in.xml" value="0.25" />
         <entry key="..\:/Users/Raj.Kayasth/AndroidStudioProjects/FirebaseAuthExampe/app/src/main/res/layout/activity_home.xml" value="0.25" />
         <entry key="..\:/Users/Raj.Kayasth/AndroidStudioProjects/FirebaseAuthExampe/app/src/main/res/layout/activity_insertion.xml" value="0.264" />
@@ -16,6 +18,7 @@
         <entry key="..\:/Users/Raj.Kayasth/AndroidStudioProjects/FirebaseAuthExampe/app/src/main/res/layout/activity_sign_up.xml" value="0.18703703703703703" />
         <entry key="..\:/Users/Raj.Kayasth/AndroidStudioProjects/FirebaseAuthExampe/app/src/main/res/layout/activity_sing_up.xml" value="0.2359375" />
         <entry key="..\:/Users/Raj.Kayasth/AndroidStudioProjects/FirebaseAuthExampe/app/src/main/res/layout/activity_upload.xml" value="0.25" />
+        <entry key="..\:/Users/Raj.Kayasth/AndroidStudioProjects/FirebaseAuthExampe/app/src/main/res/layout/emp_list_item.xml" value="0.25" />
         <entry key="..\:/Users/Raj.Kayasth/AndroidStudioProjects/FirebaseAuthExampe/app/src/main/res/layout/item_image.xml" value="0.24895833333333334" />
         <entry key="..\:/Users/Raj.Kayasth/AndroidStudioProjects/FirebaseAuthExampe/app/src/main/res/xml/file_paths.xml" value="0.24895833333333334" />
       </map>

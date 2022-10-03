@@ -1,4 +1,4 @@
-package com.example.firebaseauthexampe.realtimedb
+package com.example.firebaseauthexampe.realtimedb.activitys
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -10,20 +10,19 @@ import com.example.firebaseauthexampe.databinding.ActivityRealtimeDbBinding
 class RealtimeDbActivity : AppCompatActivity() {
 
 
-
     private var _binding: ActivityRealtimeDbBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        _binding = DataBindingUtil.setContentView(this,R.layout.activity_realtime_db)
+        _binding = DataBindingUtil.setContentView(this, R.layout.activity_realtime_db)
 
         binding.btnInsertData.setOnClickListener {
-            startActivity(Intent(this,InsertionActivity::class.java))
+            startActivity(Intent(this, InsertionActivity::class.java))
         }
 
         binding.btnFetchData.setOnClickListener {
-
+            startActivity(Intent(this, FetchingActivity::class.java))
         }
     }
 }
