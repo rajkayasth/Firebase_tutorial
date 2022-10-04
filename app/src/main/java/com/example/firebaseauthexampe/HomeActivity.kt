@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.example.firebaseauthexampe.databinding.ActivityHomeBinding
+import com.example.firebaseauthexampe.facebook_login.FacebookLoginActivity
 import com.example.firebaseauthexampe.realtimedb.activitys.RealtimeDbActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.SetOptions
@@ -64,11 +65,13 @@ class HomeActivity : AppCompatActivity() {
             deletePerson(person)
         }
 
-        binding.btnBatchWrite.setOnClickListener {
-            changeName(
-                "0Na6nc285tbZJequu2eI",
-                "Elon"
-            )
+        binding.btnGoFacebookLogin.setOnClickListener {
+//            changeName(
+//                "0Na6nc285tbZJequu2eI",
+//                "Elon"
+//            )
+            startActivity(Intent(this@HomeActivity, FacebookLoginActivity::class.java))
+
         }
 
         binding.btnRealTimeDb.setOnClickListener {
@@ -76,7 +79,7 @@ class HomeActivity : AppCompatActivity() {
         }
 
         binding.btnTransaction.setOnClickListener {
-            startActivity(Intent(this@HomeActivity,UploadActivity::class.java))
+            startActivity(Intent(this@HomeActivity, UploadActivity::class.java))
         }
 
     }

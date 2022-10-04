@@ -45,4 +45,12 @@
     <string name="emp_id">Emp id</string>
     <string name="emp_age">Emp Age</string>
     <string name="employee_salary">Employee Salary</string>
+    <string name="facebook_login">Facebook Login</string>
+
+
+    <string name="facebook_app_id">1064557214258776</string>
+    <string name="fb_login_protocol_scheme">fb1064557214258776</string>
+    <string name="facebook_client_token">cd7c1272470c1456430f6fbec0412af9</string>
+
+
 </resources>
